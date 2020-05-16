@@ -4,7 +4,7 @@ A loosely coupled code is preferred.
 
 The introduction of an anti-corruption layer and the Dependency Inversion Principle (DIP) protect your code from external library changes.
 
-In Unity, you can separate assembly space by Assembly definition.
+In Unity, you can separate assembly space by [Assembly definition](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html).
 It allows for more powerful layer separation
 
 <img src="https://github.com/naninunenoy/AsmdefDependencyPattern/blob/master/doc/AsmdefDependencyPattern.png?raw=true" width="600" />
@@ -74,7 +74,7 @@ The answer is Dependency  Injection(DI).
 [Zenject](https://github.com/svermeulen/Extenject) is DI framework wroks on Unity. If `IDependencee` is requested, set it to return an instance of `Dependencee`.
 
 ```c#
-public class DependenceIntermediary : MonoInstaller
+public class DependenceIntermediary : Zenject.MonoInstaller
 {
     public override void InstallBindings()
     {
@@ -85,19 +85,21 @@ public class DependenceIntermediary : MonoInstaller
 
 *DependenceIntermediary.asmdef* refers to both *DependenceeAbstruct.asmdef* and *DependenceeImplement.asmdef* to resolove dependency.
 
-And `Zenject.SceneContext` will resolove dependency between `IDependencee` and `Dependencee` in scene, before `Main.Awake()`.
+And `Zenject.SceneContext` will resolove dependency between `IDependencee` and `Dependencee` in scene, before `Main.Awake()` called.
 
 ___
 
 Do you need a class to traverse these layers?
 
-In order to refer from these assembly spaces, you need to define class outside of these assembly spaces.
+In order to refer from these assembly spaces, you need to create a new assembly space and define class there.
 
 <img src="https://user-images.githubusercontent.com/15327448/82117919-9c439580-97ae-11ea-93b5-eb46afce553c.png" width="300" />
 
 *Common.asmdef* does not refer to an assembly, but it is referred to by 3 assemblies.
 
+The Assembly definition help you strictly separate the layers within your Unity project.
 ___
+
 
 ## Auther
 [@naninunenoy](https://github.com/naninunenoy)
