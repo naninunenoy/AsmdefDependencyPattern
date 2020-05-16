@@ -1,0 +1,69 @@
+@startuml
+
+title AsmdefDependencyPattern
+
+class MonoBehaviour {
+  +void Start()
+}
+
+package Zenject {
+  class MonoInstaller {
+    +void InstallBindings()
+  }
+}
+
+package Common_ {
+  class Common {
+    +int value
+  }
+}
+
+package DependenceeAbstruct {
+  interface IDependencee {
+    +void DoSomething()
+    +Common GetCommonObject()
+  }
+}
+
+package DependenceeImplement {
+  class Dependencee {
+    +void DoSomething()
+    +Common GetCommonObject()
+  }
+  note right
+    Main does not know about
+    details of Dependencee
+  end note
+}
+
+package DependenceIntermediary {
+  class DependenceIntermediary {
+    +void InstallBindings()
+  }
+}
+
+package Dependencer {
+  class Main {
+    +void Start()
+  }
+}
+
+Main .do.> Common
+IDependencee .le.> Common
+Dependencee .up.> Common
+
+Dependencee <|.up. IDependencee
+Main .do.> IDependencee
+Main <|-ri- MonoBehaviour
+
+DependenceIntermediary <|-le- MonoInstaller
+DependenceIntermediary .ri.> IDependencee
+DependenceIntermediary .ri.> Dependencee
+
+note as Scene
+  Put in the scene
+  end note
+Scene --> Main
+Scene -> DependenceIntermediary
+
+@enduml
