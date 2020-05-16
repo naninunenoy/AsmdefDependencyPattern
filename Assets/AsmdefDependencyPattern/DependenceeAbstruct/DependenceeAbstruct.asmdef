@@ -1,3 +1,15 @@
-﻿{
-	"name": "DependenceeAbstruct"
+{
+    "name": "DependenceeAbstruct",
+    "references": [
+        "GUID:9e1a342eab9025544a1a13937a7425bf"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

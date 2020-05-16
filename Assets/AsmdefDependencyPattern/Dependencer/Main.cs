@@ -2,7 +2,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace AsmdefDependencyPattern.Dependencer
+namespace AsmdefDependencyPattern
 {
     public class Main : MonoBehaviour
     {
@@ -11,6 +11,7 @@ namespace AsmdefDependencyPattern.Dependencer
         void Start()
         {
             dependencee.DoSomething();
+            Debug.Log(dependencee.GetCommonObject().value);
         }
     }
 }

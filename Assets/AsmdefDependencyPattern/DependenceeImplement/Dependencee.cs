@@ -8,5 +8,10 @@ namespace AsmdefDependencyPattern.DependenceeImplement
         {
             UnityEngine.Debug.Log("Dependencee.DoSomething()");
         }
+
+        public Common GetCommonObject()
+        {
+            return new Common {value = 999};
+        }
     }
 }
