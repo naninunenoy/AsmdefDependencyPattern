@@ -1,3 +1,15 @@
-﻿{
-	"name": "DependenceeImplement"
+{
+    "name": "DependenceeImplement",
+    "references": [
+        "GUID:5536cc76e5ba2d94f98347430ff51366"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
