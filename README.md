@@ -98,7 +98,8 @@ In order to refer from these assembly spaces, you need to create a new assembly 
 *Common.asmdef* does not refer to an assembly, but it is referred to by 3 assemblies.
 
 The Assembly definition help you strictly separate the layers within your Unity project.
-___
+
+see alse: https://github.com/naninunenoy/UnityCleanArchitectureExample
 
 
 ## Auther
