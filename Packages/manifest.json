@@ -1,5 +1,16 @@
 {
+  "scopedRegistries": [
+    {
+      "name": "Unofficial Unity Package Manager Registry",
+      "url": "https://upm-packages.dev",
+      "scopes": [
+        "jp.cysharp",
+        "com.stevevermeulen"
+      ]
+    }
+  ],
   "dependencies": {
+    "com.stevevermeulen.extenject": "9.0.0",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ide.rider": "1.1.4",
     "com.unity.ide.vscode": "1.2.0",
