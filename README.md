@@ -99,7 +99,7 @@ In order to refer from these assembly spaces, you need to create a new assembly 
 
 The Assembly definition help you strictly separate the layers within your Unity project.
 
-see alse: https://github.com/naninunenoy/UnityCleanArchitectureExample
+see also: https://github.com/naninunenoy/UnityCleanArchitectureExample
 
 
 ## Auther
